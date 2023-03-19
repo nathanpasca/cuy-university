@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>COLOR MODE</title>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <a href="index.html">HOME</a>
+            <a onclick="darkMode()">DARK</a>
+            <a onclick="redMode()">RED</a>
+            <a onclick="blueMode()">BLUE</a>
+            <a onclick="pinkMode()">PINK</a>
+        </nav>
+
+        <h1>COLOR MODE - CUY UNIVERSITY</h1>
+    </div>
+
+    <script>
+        let body = document.body;
+        let darkLimit = 5;
+        let redLimit = 5;
+        let blueLimit = 5;
+        let pinkLimit = 5;
+        
+        let darkCounter = 0;
+        let redCounter = 0;
+        let blueCounter = 0;
+        let pinkCounter = 0;
+
+        function darkMode() {
+            darkCounter += 1;
+            if(darkCounter > darkLimit) {
+                alert('Limit Reached!');
+                return;
+            } else if(darkCounter < darkLimit){
+                body.classList.toggle('dark');
+            } 
+        }
+
+        function redMode() {
+            redCounter += 1;
+            if(redCounter > redLimit) {
+                alert('Limit Reached');
+                return;
+            } else if(redCounter < redLimit) {
+                body.classList.toggle('red');
+            }
+        }
+
+        function blueMode() {
+            blueCounter += 1;
+            if(blueCounter > blueLimit) {
+                alert('Limit Reached');
+                return;
+            } else if(blueCounter < blueLimit) {
+                body.classList.toggle('blue');
+            }
+        }
+
+        function pinkMode() {
+            pinkCounter += 1;
+            if(pinkCounter > pinkLimit) {
+                alert('Limit Reached');
+                return;
+            } else if(pinkCounter < pinkCounter) {
+                body.classList.toggle("pink")
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
